@@ -13,7 +13,7 @@ export default class FormularioGasto extends Component {
             cantidadGasto: this.cantidadGasto.current.value
         }
 
-        console.log(gasto);
+        this.props.crearGasto(gasto);
 
         e.currentTarget.reset();
         this.nombreGasto.current.focus();
