@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './css/App.css';
-import Header from './components/header';
-import FormularioGasto from './components/formulario';
+import Header from './components/Header';
+import FormularioGasto from './components/Formulario';
 
 class App extends Component {
     render() {
