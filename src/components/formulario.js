@@ -24,17 +24,17 @@ export default class FormularioGasto extends Component {
         return (
             <form onSubmit={this.crearGasto}>
                 <h2>Agrega tus gastos aqui</h2>
-                <div className="campo">
-                    <label>Nombre Gasto</label>
-                    <input ref={this.nombreGasto} className="u-full-width" type="text" placeholder="Ej. Transporte" />
+                <div className="form-group">
+                    <label htmlFor="name">Nombre del Gasto:</label>
+                    <input ref={this.nombreGasto} className="form-control" id="name" type="text" placeholder="Ej. Transporte" />
                 </div>
 
-                <div className="campo">
-                    <label>Cantidad</label>
-                    <input ref={this.cantidadGasto} className="u-full-width" type="text" placeholder="Ej. 300" />
+                <div className="form-group">
+                    <label htmlFor="cantidad">Cantidad:</label>
+                    <input ref={this.cantidadGasto} className="form-control" id="cantidad" type="text" placeholder="Ej. 300" />
                 </div>
 
-                <input className="button-primary u-full-width" type="submit" value="Agregar" />
+                <input className="btn btn-primary btn-block" type="submit" value="Agregar" />
             </form>
         );
     }
