@@ -9,8 +9,8 @@ export default class FormularioGasto extends Component {
         e.preventDefault();
 
         const gasto = {
+            cantidadGasto: this.cantidadGasto.current.value,
             nombreGasto: this.nombreGasto.current.value,
-            cantidadGasto: this.cantidadGasto.current.value
         }
 
         this.props.crearGasto(gasto);
