@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export default class FormularioGasto extends Component {
 
@@ -11,7 +12,7 @@ export default class FormularioGasto extends Component {
         const gasto = {
             cantidadGasto: this.cantidadGasto.current.value,
             nombreGasto: this.nombreGasto.current.value,
-        }
+        };
 
         this.props.crearGasto(gasto);
 
@@ -39,3 +40,7 @@ export default class FormularioGasto extends Component {
         );
     }
 }
+
+FormularioGasto.propTypes = {
+    crearGasto: PropTypes.func.isRequired
+};

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { revisarPresupuesto } from '../helpers/helper';
+import PropTypes from 'prop-types';
 
 export default class Restante extends Component {
 
@@ -13,3 +14,8 @@ export default class Restante extends Component {
         );
     }
 }
+
+Restante.propTypes = {
+    presupuesto: PropTypes.number.isRequired,
+    restante: PropTypes.number.isRequired
+};
