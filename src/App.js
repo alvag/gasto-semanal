@@ -4,6 +4,7 @@ import swal from 'sweetalert2'
 import Header from './components/Header';
 import FormularioGasto from './components/Formulario';
 import Listado from './components/Listado';
+import ControlPresupuesto from './components/ControlPresupuesto';
 
 class App extends Component {
 
@@ -51,6 +52,12 @@ class App extends Component {
 
                         <div className="col-6">
                             <Listado gastos={this.state.gastos} />
+
+                            <ControlPresupuesto
+                                presupuesto={this.state.presupuesto}
+                                restante={this.state.restante}
+                            />
+
                         </div>
                     </div>
                 </div>
