@@ -31,7 +31,7 @@ export default class FormularioGasto extends Component {
 
                 <div className="form-group">
                     <label htmlFor="cantidad">Cantidad:</label>
-                    <input ref={this.cantidadGasto} className="form-control" id="cantidad" type="text" placeholder="Ej. 300" />
+                    <input ref={this.cantidadGasto} className="form-control" id="cantidad" type="number" placeholder="Ej. 300" />
                 </div>
 
                 <input className="btn btn-primary btn-block" type="submit" value="Agregar" />

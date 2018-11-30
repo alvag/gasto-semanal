@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './css/App.css';
-import swal from 'sweetalert2'
+import swal from 'sweetalert2';
 import Header from './components/Header';
 import FormularioGasto from './components/Formulario';
 import Listado from './components/Listado';
@@ -30,13 +30,20 @@ class App extends Component {
             }
         });
         presupuesto = Number(presupuesto);
-        this.setState({ presupuesto, restante: presupuesto })
+        this.setState({ presupuesto, restante: presupuesto });
     }
 
     crearGasto = (gasto) => {
-        const gastos = this.state.gastos
+        let gastos = this.state.gastos;
         gastos.push(gasto);
+        this.restarPresupuesto(gasto.cantidadGasto);
         this.setState({ gastos });
+    }
+
+    restarPresupuesto = cantidad => {
+        this.setState({
+            restante: this.state.restante - Number(cantidad)
+        });
     }
 
     render() {
