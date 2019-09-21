@@ -1,3 +1,4 @@
+//@ts-check
 import React, { Component } from 'react';
 import './css/App.css';
 import swal from 'sweetalert2';
@@ -12,7 +13,8 @@ class App extends Component {
         presupuesto: 0,
         restante: 0,
         gastos: []
-    }
+    };
+
 
     componentDidMount() {
         this.obtenerPresupuesto();
@@ -31,22 +33,25 @@ class App extends Component {
         });
         presupuesto = Number(presupuesto);
         this.setState({ presupuesto, restante: presupuesto });
-    }
+    };
 
     crearGasto = (gasto) => {
         let gastos = this.state.gastos;
         gastos.push(gasto);
         this.restarPresupuesto(gasto.cantidadGasto);
         this.setState({ gastos });
-    }
+    };
 
     restarPresupuesto = cantidad => {
         this.setState({
             restante: this.state.restante - Number(cantidad)
         });
-    }
+    };
 
     render() {
+
+        let a = 1;
+        a = '2';
         return (
             <div className="container">
                 < Header title="Gasto Semanal" />
